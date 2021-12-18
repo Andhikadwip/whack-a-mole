@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 0;
+}
+body {
+  background-color: orange;
+  font-family: 'Architects Daughter', cursive;
+}
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: url(../img/palu1.png), auto;
+}
+.container:active {
+  cursor: url(../img/palu2.png), auto;
+}
+span {
+  background: #ffebc2;
+  padding: 30px;
+  border-radius: 10px;
+}
+.tanah {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+.tanah::after {
+  content: ' ';
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url('../img/tanah.png') bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  bottom: -20px;
+}
+button {
+  display: block;
+  margin: auto;
+  border: 0px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: cursive;
+  background-color: #ffebc2;
+}
+.tikus {
+  width: 100%;
+  height: 100%;
+  background: url('../img/tikus.png') bottom center no-repeat;
+  background-size: 59%;
+  position: absolute;
+  top: 100px;
+  transition: 0.3s;
+}
+
+.tanah.muncul .tikus {
+  top: -10px;
+}
